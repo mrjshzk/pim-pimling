@@ -1,33 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pim Pimling's Friends</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pim's Friends</title>
+    <script defer src="responsive_navbar.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="friends_grid.css" />
 </head>
+
 <body>
-    <section id="intro">
-        <h1 class="title">I have a lot of friends!</h1>
-        <h2 class="subtitle">Here are some of them!</h2>
+    <div class="background"></div>
+    <nav class="navbar">
+        <div class="logo">Pim Pimling</div>
+        <button class="menu-toggle">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Friends.html">Friends</a></li>
+            <li><a href="Work.html">Work</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Pim's Friends</h1>
+    </header>
+
+    <section class="friends-grid">
+
+        <a href="#charlie" class="friend-card">
+            <img src="images/charlie.png" alt="Charlie" />
+            <div class="name-overlay">Charlie</div>
+        </a>
+
+        <a href="#glep" class="friend-card">
+            <img src="images/glep.png" alt="Glep" />
+            <div class="name-overlay">Glep</div>
+        </a>
+
+        <a href="#mrfrog" class="friend-card">
+            <img src="images/mr_frog.png" alt="Mr. Frog" />
+            <div class="name-overlay">Mr. Frog</div>
+        </a>
+
+        <a href="#alan" class="friend-card">
+            <img src="images/alan.png" alt="Alan" />
+            <div class="name-overlay">Alan</div>
+        </a>
+
     </section>
 
-    <section id="friends">
-        <div class="grid">
-            <div class="grid-item">
-                <!-- Um div é o elemento que aparece por fora e outra será o que aparecerá quando este é clicado? -->
-                <div class="outside-item">
-                    <!-- Inserir imagem -->
-                    <img src="" alt="">
-                </div>
-
-                <!-- Este começa com display: none ? e depois ao clicar ocupa a maior parte da página e fica centrado? -->
-                <div class="fullscreen-item">
-                    <p class="character-name">Charlie</p>
-                    <img src="" alt="" class="character-portrait">
-                    <p class="character-description">Charlie is one of my best friends</p>
-                </div>
-            </div>
+    <!-- MODALS -->
+    <div id="charlie" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <h2>Charlie</h2>
+            <p>Pim thinks Charlie is very loyal, even if he gets annoyed easily.</p>
         </div>
-    </section>
+    </div>
+
+    <div id="glep" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <h2>Glep</h2>
+            <p>Pim thinks Glep is weird but in a cute, oddly charming way.</p>
+        </div>
+    </div>
+
+    <div id="mrfrog" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <h2>Mr. Frog</h2>
+            <p>Pim hopes Mr. Frog gets the help he desperately needs.</p>
+        </div>
+    </div>
+
+    <div id="alan" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <h2>Alan</h2>
+            <p>Pim thinks Alan is a hardworking and pleasant coworker.</p>
+        </div>
+    </div>
+
 </body>
+
 </html>

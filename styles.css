@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background: #F38BAA;
+    color: #000000;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg, #F38BAA, #F7A9C1, #FFE757, #7FED48);
+    background-size: 400% 400%;
+    animation: moveGradient 10s ease infinite;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animated, color-shifting title */
+@keyframes colorShift {
+    0% {
+        color: #576FFF;
+    }
+
+    33% {
+        color: #B648ED;
+    }
+
+    66% {
+        color: #576FFF;
+    }
+
+    100% {
+        color: #B648ED;
+    }
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    animation: moveTitle 10s ease-in-out infinite alternate, colorShift 10s ease infinite;
+    text-shadow: 3px 3px 0 #1A1A24;
+    display: inline-block;
+}
+
+@keyframes moveTitle {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(15px);
+    }
+}
+
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #F7A9C1;
+    border-bottom: 4px solid #1A1A24;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    color: #1A1A24;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #1A1A24;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #F7A9C1;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        padding: 1rem 2rem;
+        border: 3px solid #1A1A24;
+        border-radius: 1rem;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+header {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: #FFFFFF;
+    text-shadow: 4px 4px 0 #1A1A24;
+}
+
+header p {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    color: #1A1A24;
+}
+
+.pim-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.pim-text {
+    max-width: 450px;
+    background: #F7A9C1;
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 4px solid #1A1A24;
+    font-size: 1.2rem;
+}
+
+.pim-text h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #1A1A24;
+}
+
+.pim-image img {
+    width: 300px;
+    border: 4px solid #1A1A24;
+    border-radius: 2rem;
+    background: white;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1rem;
+    color: #1A1A24;
+}

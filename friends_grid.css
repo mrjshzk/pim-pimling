@@ -1,0 +1,116 @@
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.friend-card {
+    position: relative;
+    background: #F7A9C1;
+    border: 4px solid #1A1A24;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+.friend-card img {
+    width: 100%;
+    display: block;
+}
+
+.friend-card:hover .name-overlay {
+    opacity: 1;
+}
+
+.name-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* CSS‑ONLY MODAL */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: #F7A9C1;
+    border: 4px solid #1A1A24;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    max-width: 400px;
+    margin: 0;
+    text-align: center;
+}
+
+.modal-content h2 {
+    padding-bottom: 5%;
+}
+
+.close {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #1A1A24;
+    float: right;
+}
+
+/* Wiggle animation */
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(-2deg);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.friend-card:hover {
+    animation: wiggle 0.4s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border: 6px solid #FF4DA6;
+}
+
+/* Center modal perfectly */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

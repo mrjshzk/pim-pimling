@@ -1,21 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pim Pimling's Home</title>
-</head>
-<body>
-    <nav id="navbar">
-        <a href="index.html" class="nav-item">Home</a>
-        <a href="work.html" class="nav-item">Work</a>
-        <a href="friends.html" class="nav-item">Friends</a>
-    </nav>
 
-    <!-- Later add some background images of pim besides the text -->
-    <section id="main">
-        <h1 class="title">Hi! I'm Pim!</h1>
-        <h2 class="subtitle">I'm a overly optimistic pink critter that helps out at Smiling Friends Inc.</h2>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pim Pimling - Home</title>
+    <script defer src="responsive_navbar.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <nav class="navbar">
+        <div class="logo">Pim Pimling</div>
+        <button class="menu-toggle">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Friends.html">Friends</a></li>
+            <li><a href="Work.html">Work</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Hi! I'm Pim Pimling!</h1>
+        <p>Welcome to my cheerful corner of the web!</p>
+    </header>
+
+    <section class="pim-section">
+        <div class="pim-text">
+            <h2>About Me</h2>
+            <p>
+                I'm Pim! A friendly little guy with a big heart and an even bigger desire to help others.
+                Whether it's cheering people up, solving problems (sometimes), or just being myself —
+                I try my best every day.
+            </p>
+            <p style="margin-top:1rem;">
+                On this website, you'll find fun updates, projects I'm working on, and things that make me smile.
+                I hope they make you smile too!
+            </p>
+        </div>
+
+        <div class="pim-image">
+            <img src="https://static.images.dropstab.com/images/pim-pimling.jpg" alt="Pim Pimling" />
+        </div>
     </section>
+
+    <footer>
+        © 2025 Pim Pimling — Smiling Friends
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const links = document.querySelector('.nav-links');
+
+        toggle.addEventListener('click', () => {
+            links.classList.toggle('show');
+        });
+    </script>
 </body>
+
 </html>
