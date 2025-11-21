@@ -109,36 +109,8 @@ header h1 {
     font-weight: bold;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
 
-/* MOBILE */
-@media (max-width: 800px) {
-    .menu-toggle {
-        display: block;
-    }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #F7A9C1;
-        position: absolute;
-        top: 70px;
-        right: 10px;
-        padding: 1rem 2rem;
-        border: 3px solid #1A1A24;
-        border-radius: 1rem;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-}
 
 header {
     text-align: center;
