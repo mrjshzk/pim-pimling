@@ -21,7 +21,7 @@ jobs:
       - name: Prepare deployment folder
         run: |
           mkdir public
-          cp -r html/* public/html/
+          cp -r html/* public/
           cp -r styles public/styles/
           cp -r images public/images/
 
