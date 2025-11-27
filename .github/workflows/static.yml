@@ -22,8 +22,8 @@ jobs:
         run: |
           mkdir public
           cp -r html/* public/
-          cp -r styles public/styles/
-          cp -r images public/images/
+          cp -r styles public/
+          cp -r images public/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
